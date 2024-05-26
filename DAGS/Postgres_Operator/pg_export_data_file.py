@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 
 
@@ -39,15 +38,14 @@ with DAG(
         """
     )
 
-    task3 = PostgresOperator(
-        task_id='delete_data_from_table',
+
+    task_export = PostgresOperator(
+        task_id='export_table_to_file',
         postgres_conn_id='postgres_localhost',
         sql="""
-            DELETE FROM dag_runs where dt = '{{ ds }}' and dag_id = '{{ dag.dag_id }}';
+            COPY dag_runs TO '/path/to/dag_runs.csv' DELIMITER ',' CSV HEADER;
         """
     )
     
-    task1 >> task3 >> task2
-    
-    
-# feel free to edit the file as per ur requirements
+    task1 >> task2 >> task_export
+

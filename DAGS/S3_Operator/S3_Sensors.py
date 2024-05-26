@@ -12,15 +12,21 @@ default_args = {
 with DAG(
     dag_id='dag_with_s3key_sensor_v1',
     default_args=default_args,
-    start_date=datetime(2021, 12, 19),
-    schedule_interval='0 0 * * *'           # For more information: https://crontab.guru/
-) as dag:
+    start_date=datetime(2024, 5, 16),
+    schedule_interval='0 0 * * *',           # For more information: https://crontab.guru/
+    catchup=False
+    ) as dag:
     
     
     task1=S3KeySensor(
         task_id="sensor_minios_s3",
-        bucket_name="minios",
+        bucket_name="your_bucket_name",
+        bucket_key='my-file.txt',
         aws_conn_id="aws_s3_default",
-        poke_interval=5
+        mode='poke',
+        poke_interval=5,
+        timeout=30
     )
     
+    
+    task1
