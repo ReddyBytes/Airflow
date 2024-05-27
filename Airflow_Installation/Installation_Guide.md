@@ -14,7 +14,7 @@ __Step 2 :__ make a directory for airflow in /opt folder. And enter into the fol
 __Step 3 :__ Copy the docker compose file to the current directory. You can find the docker compose .yml file in this folder itself.   
 This compose file is with LocalExecutor  
   
-    curl -LfO 'https://github.com/ReddyBytes/Airflow/blob/main/Airflow_Installation/docker%20compose.yml'
+    curl -LfO 'https://github.com/ReddyBytes/Airflow/blob/main/Airflow_Installation/docker-compose.yml'
 
 
 __Step 4 :__ Setup the necessary parent directories and user permissions to create DAGS in the current directory.
