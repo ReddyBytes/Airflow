@@ -13,9 +13,9 @@
 
  connection type : Postgres  
 
- Host : postgres   -----> this should match with [docker compose.yml](/Airflow_Installation/docker%20compose.yml) line 62  
+ Host : postgres   -----> this should match with [docker compose.yml](/Airflow_Installation/docker-compose.yml) line 96 
 
-Login and password : same as [docker compose.yml](/Airflow_Installation/docker%20compose.yml)  line 65,66
+Login and password : same as [docker compose.yml](/Airflow_Installation/docker-compose.yml)  line 93,94
 
 Port : 5432  
 
