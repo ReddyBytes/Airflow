@@ -12,10 +12,12 @@ __Step 2 :__ make a directory for airflow in /opt folder. And enter into the fol
     cd /opt/airflow 
 
 __Step 3 :__ Copy the docker compose file to the current directory. You can find the docker compose .yml file in this folder itself.   
-This compose file is with LocalExecutor  
+This compose file is with CeleryExecutor  
   
-    curl -LfO 'https://github.com/ReddyBytes/Airflow/blob/main/Airflow_Installation/docker-compose.yml'
+    
+    curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.9.1/docker-compose.yaml'
 
+if you want to use LocalExecutor change docker compose file with [this](/Airflow_Installation/docker-compose.yml)
 
 __Step 4 :__ Setup the necessary parent directories and user permissions to create DAGS in the current directory.
   
