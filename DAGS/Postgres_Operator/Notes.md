@@ -9,7 +9,7 @@
 
  __Step : 3__   
 
- Connection id : postgres_localhost  -----> this should match with [postgres_db.py](/DAGS/Postgres_Connnection/postgres_db.py) line 23  
+ Connection id : postgres_localhost  -----> this should match with [postgres_db.py](/DAGS/Postgres_Operator/postgres_db.py) line 23  
 
  connection type : Postgres  
 
