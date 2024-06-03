@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.providers.amazon.aws.operators.s3_create_bucket import S3CreateBucketOperator
+from airflow.providers.amazon.aws.operators.s3 import S3CreateBucketOperator
 
 default_args = {
     'owner': 'airflow',
