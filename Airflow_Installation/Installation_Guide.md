@@ -2,6 +2,8 @@
 __Step 1 :__   Install docker in your instance as root user . here i take ubuntu as my machine
   
      sudo su -
+
+     
      curl -fsSL https://get.docker.com -o get-docker.sh
      sudo sh get-docker.sh
 
