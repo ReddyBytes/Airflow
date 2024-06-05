@@ -121,7 +121,7 @@ with DAG(
         python_callable=check_file_in_s3_and_log_message,
         dag=dag,
     )
-    create_table_task >> insert_data_into_table >> export_data_into_file >> read_data_from_file_and_manipulate_data_and_write_to_file >> upload_file_to_S3 >> final_result >> log_message_task
+    create_table_task >> insert_data_into_table >> export_data_into_file >> read_data_from_file_and_manipulate_data_and_write_to_file >> local_to_s3 >> log_message_task
 
 
     
