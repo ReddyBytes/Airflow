@@ -4,7 +4,7 @@ import pandas as pd
 import boto3
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.operators.python_operator import PythonOperator
-from airflow.providers.amazon.aws.operators.s3_upload_file import S3UploadFileOperator 
+from airflow.providers.amazon.aws.transfers.local_to_s3 import LocalFilesystemToS3Operator
 from airflow.providers.amazon.aws.sensors.s3 import S3KeySensor
 
 default_args = {
@@ -61,12 +61,22 @@ with DAG(
         """
     )
     
-    def manipulate_data_from_file():
-        df = pd.read_csv('/tmp/Training.csv')
-        df['age'] += 5
-        df.to_csv('/tmp/Manipulated_Training_data.csv', index=False)
-        # print(df.head())
+    # def manipulate_data_from_file():
+    #     df = pd.read_csv('/tmp/Training.csv')
+    #     df['age'] += 5
+    #     df.to_csv('/tmp/Manipulated_Training_data.csv', index=False)
+    #     # print(df.head())
     
+    def manipulate_data_from_file():
+        source='/tmp/Training.csv'
+        destination='/tmp/Manipulated_Training_data.csv'
+        with open(source, 'r') as source_file:
+            content=source_file.read()
+        manipulate_data=content.replace('age', 'age+5')
+        with open(destination, 'w') as destination_file:
+            destination_file.write(manipulate_data)
+            
+        print('Manipulated data is written to file')
     
     read_data_from_file_and_manipulate_data_and_write_to_file = PythonOperator(
         task_id='read_manipulate_write_data_to_file',
@@ -76,12 +86,12 @@ with DAG(
     
     
         
-    upload_file_to_S3 = S3UploadFileOperator(
-        task_id='upload_file_into_S3',
-        aws_conn_id='aws_default',  #This name should match the connection ID for AWS credentials
-        bucket_name='plreddy_s3_bucket',
-        bucket_key='Manipulated_Training_data.csv',
-        object_name='/tmp/Manipulated_Training_data.csv', 
+    local_to_s3 = LocalFilesystemToS3Operator(
+        task_id='local_to_s3',
+        filename='/tmp/Manipulated_Training_data.csv',
+        dest_key='s3://s3_bucket/Manipulated_Training_data.csv',
+        #dest_bucket='s3_bucket',
+        aws_conn_id='aws_default',
         
     )
     
