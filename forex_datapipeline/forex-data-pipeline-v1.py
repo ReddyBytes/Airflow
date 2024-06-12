@@ -1,6 +1,8 @@
 from airflow import DAG
 from datetime import datetime, timedelta
 from airflow.providers.http.sensors.http import HttpSensor
+from airflow.sensors.filesystem import FileSensor
+
 
 default_args={
     "owner":"ReddyBytes",
@@ -24,12 +26,18 @@ with DAG(
     forex_data_check=HttpSensor(
         task_id="forex_data_check",
         http_conn_id="http_conn_id",
-        endpoint="/forex_data.csv",
+        endpoint="ReddyBytes/Airflow/blob/main/forex_datapipeline/api-forex-exchange.json",
         method="GET",
-        response_check=lambda response: response.status_code == 200,
+        response_check=lambda response: "rates" in response.text,
         poke_interval=60,
         timeout=600,
-        retries=5,
-        retry_delay=timedelta(minutes=5)
-    
+    )
+
+    file_check=FileSensor(
+        task_id="file checking in the path",
+        file_conn_id="forex_path",
+        filepath='file_name',   # /opt/airflow/files/test.csv  then filepath =test.csv ,  connections extras ={/opt/airflow/files} 
+        poke_interval=60,
+        timeout=600
+
     )
