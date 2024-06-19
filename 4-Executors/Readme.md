@@ -18,18 +18,25 @@
 
 - **Database Compatibility**: 
     - Compatible with SQLite, making it suitable for setups where multiple connections are not supported.
+    - SQLite is limit upto 140TB
+    - Database stored in a single disk file
 
 #### 2) LocalExecutor
 
 - **Description**: 
-    - Executes tasks on the same machine as the scheduler, allowing for parallel execution of tasks. It's suitable for small-scale, single-machine production installations.
+    - Executes tasks on the same machine as the scheduler, allowing for parallel execution of tasks. 
+    - Vertical Scaling
+    - single point of failure
+
 
 - **Use Case**: 
     -  Ideal for small production environments where tasks can be efficiently run on the same machine as the scheduler.  
     - Requires a database that supports multiple connections, such as MySQL or PostgreSQL.
 
 - **Parallelism**: 
-    - Supports running multiple tasks in parallel, improving throughput compared to the SequentialExecutor.
+    - `Parallelism :` The maximum number of task instances that can run simultaneously across all DAGs.
+    - `max_active_tasks_per_dag :` The maximum number of task instances that can run concurrently for a single DAG.
+    
 
 #### 3) CeleryExecutor
 
