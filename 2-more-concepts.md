@@ -42,11 +42,26 @@ The **Execution Date** represents the actual date when a task instance was execu
 ### Task Instances 
 
 - A Task Instance represents a specific execution of a task within a DAG.
-- It is uniquely identified by the combination of a DAG, a task, and a specific execution date (`execution_date`). 
+
+- Each task defined in a DAG can have multiple Task Instances, each corresponding to a different execution of the task
+
 - Each Task Instance goes through various states such as `running`, `success`, `failed`, `skipped`, or `up for retry`, reflecting the outcome of the task's execution during a DAG run.
 
-    #### Key Aspects of Task Instances
 
-    - **Combination of DAG, Task, and Execution Date**: Defines a unique Task Instance.
-    - **Execution States**: Indicates the current state of the Task Instance, such as running, successful, failed, skipped, or pending retry.
-    - **Tracking and Management**: Allows for detailed tracking and management of task executions over time, facilitating debugging and monitoring of workflows.
+
+### Dag Run
+
+- A DAGRun represents a single execution of a DAG. 
+
+- When a DAG is scheduled to run, Airflow creates a DAGRun for that execution. Each DAGRun contains multiple Task Instances, one for each task defined in the DAG.
+
+- The DAGRun tracks the overall progress of the DAG, including the completion status of all tasks within the DAG.
+
+
+### Ad Hoc Queries 
+
+- Ad Hoc Queries allows users to interactively perform SQL queries against the Airflow metadata database. 
+- his feature was part of the Data Profiling tools available in Airflow versions prior to 2.0.0.
+
+
+

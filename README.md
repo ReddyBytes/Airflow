@@ -60,6 +60,8 @@ The reasons why organizations choose to use Airflow:
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*PWQB6lj12818Kzp-rszvpw.png)  
 
+
+![](https://coder2j.com/img/airflow/task-life-cycle-architecture/airlfow-task-retry-and-reschedule.png)
 ### Core Components
 
 ### Web Server
