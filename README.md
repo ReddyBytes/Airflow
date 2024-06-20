@@ -86,80 +86,75 @@ The reasons why organizations choose to use Airflow:
 ### Triggerer
 - **Functionality**: Supports deferrable operators. This component is optional and must be run separately, needed only for using deferrable operators.
 
-----
----
-### How airflow works
-![](https://media.licdn.com/dms/image/D5622AQE7hiWDSNzBHw/feedshare-shrink_2048_1536/0/1705147535482?e=2147483647&v=beta&t=Sq-s_24Iv5r4mtYj6-j1eYKIswfN6NJ5TR6zlx5XS2c)
-
-
 
 ### Limitations :  
 
 we cant use airflow as `Streaming` and `data processing tool`
 
+----
+----
 
-# core concepts
-
-## DAG (Directed Acyclic Graph)
-
-- A DAG (Directed Acyclic Graph) is a collection of tasks organized by their dependencies and relationships, defining how they should run.  
--  DAGs are written in Python and placed in Airflow's designated folder, allowing for dynamic building and execution of workflows.  
-- simply DAG is a data pipeline
-
-![](https://www.steveclarkapps.com/wp-content/uploads/2019/03/DirectGraphs_CyclicAcyclic.jpg)  
-
-## Operators
-- simply operator is a Task 
-- it encapsulates the logic that we are going to perform  
-
-### 1) Action Operators
-
-Action operators are used to perform actions such as executing shell commands, calling external services, or manipulating data.
-
-- **PythonOperator**: Executes a Python callable.
-- **BashOperator**: Executes a bash command.
-- **ShellOperator**: Executes a shell command.
-- **EmailOperator**: Sends an email notification.
-- **SlackOperator**: Posts a message to Slack.
-- **SnsPublisher**: Publishes a message to AWS Simple Notification Service (SNS).
-- **PostgresOperator**: Executes a postgresql ,sql queries
-- **MySQLOperator**: Executes SQL statements against a MySQL database.
-- **SnowflakeOperator**: Executes SQL statements against a Snowflake database.
-
-### 2) Transfer Operators
-
-Transfer operators are specifically designed for moving data between locations. 
-
-- **CopyToS3Operator**: Copies files to Amazon S3.
-- **MoveFileOperator**: Moves a file from one location to another.
-- **SFTPOperator**: Transfers files via SFTP.
-- **GoogleCloudStorageToBigQueryOperator**: Loads data from Google Cloud Storage into BigQuery.
-- **HdfsToS3Operator**: Copies files from HDFS to Amazon S3.
+## Single Node vs. Multi-Node Architecture
 
 
+### 1) Single-Node Architecture
 
-### 3) Sensor Operators
-
-Sensor operators wait for a condition to become true before proceeding with the next task.
-
-- **HttpSensor**: Waits until a given URL returns a successful HTTP response for every 60sec.
-- **FileSensor**:it checks whether the file exists or not in the file system for every 10 sec
-- **SqlSensor**: Waits until a SQL query returns a result.
-- **GCSObjectExistenceSensor**: Checks if a Google Cloud Storage object exists.
-
----
-### a) External System Interaction Operators
-
-- **HttpOperator**: Makes an HTTP request.
-- **RestApiOperator**: Calls a REST API endpoint.
-- **KafkaConsumerOperator**: Consumes messages from a Kafka topic.
-- **KafkaProducerOperator**: Produces messages to a Kafka topic.
-
-### b) Utility Operators
-
-- **DummyOperator**: Does nothing and is used for testing.
-- **BranchPythonOperator**: Branches the workflow based on the return value of a Python callable.
-- **TriggerRule**: Defines the trigger rule for a task, specifying when it should be executed.
+- In a single-node architecture, all components of Airflow reside on a single machine. 
+- This setup is straightforward and requires minimal configuration, making it suitable for small-scale deployments or environments with moderate amounts of DAGs.
 
 
+![](https://miro.medium.com/v2/resize:fit:1400/1*xLKIM-wldyYfPGGgdxIcDA.png)
 
+#### Components:
+
+- **Webserver**: Handles HTTP requests and serves the Airflow UI, allowing users to interact with their workflows.
+
+- **Scheduler**: Monitors the metadata database for new tasks and schedules them for execution.
+
+- **Worker (LocalExecutor)**: Executes tasks locally on the same machine. It pulls tasks from an IPC (Inter Process Communication) queue and runs them.
+
+#### Advantages:
+
+- Simplicity: Easy to set up and manage.
+- No external dependencies required.
+
+#### Limitations:
+
+- Scalability: Difficult to scale beyond the capabilities of a single machine.
+- Performance: May become a bottleneck as the workload increases.
+
+### 2) Multi-Node Architecture
+
+- A multi-node architecture distributes Airflow components across multiple machines, enhancing scalability, reliability, and performance. 
+- This setup is ideal for larger, more complex workflows and environments that require high availability and the ability to scale horizontally.
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*7pr0Q1zV1d29E5pt87Xmag.png)
+#### Components:
+
+- **Webserver & Scheduler**: Typically co-located on one machine for simplicity, though they can be distributed.
+
+- **Workers (CeleryExecutor)**: Run on separate machines, executing tasks concurrently. Workers communicate with each other and the scheduler through a message queue (e.g., Redis).
+
+#### Advantages:
+
+- **Scalability**: Easily scale up by adding more workers.
+
+- **High Availability**: If one worker node fails, others continue operating.
+- **Resource Optimization**: Dedicated workers can be allocated for specific types of tasks, optimizing resource usage.
+
+#### Limitations:
+
+- Complexity: More challenging to set up and manage due to distributed nature.
+- Dependency on external messaging systems (e.g., Redis, RabbitMQ).
+
+## Workflow in Airflow
+
+Airflow workflows are defined as Directed Acyclic Graphs (DAGs), where each node represents a task, and edges represent dependencies between tasks.
+
+1. **Planning Phase**: The scheduler reads DAG definitions from the metadata database and plans the execution order of tasks based on their dependencies.
+
+2. **Execution Phase**: Tasks are dispatched to workers for execution. In a single-node setup, the local worker executes tasks. In a multi-node setup, tasks are distributed among workers, potentially running on different machines.
+3. **Monitoring Phase**: Throughout execution, the scheduler monitors task progress and updates the metadata database accordingly. The webserver provides a UI for users to monitor the status of their workflows.
+
+
+![](https://media.licdn.com/dms/image/D5622AQE7hiWDSNzBHw/feedshare-shrink_2048_1536/0/1705147535482?e=2147483647&v=beta&t=Sq-s_24Iv5r4mtYj6-j1eYKIswfN6NJ5TR6zlx5XS2c)
