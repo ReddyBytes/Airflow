@@ -21,6 +21,8 @@
     - SQLite is limit upto 140TB
     - Database stored in a single disk file
 
+![](https://miro.medium.com/v2/resize:fit:1400/1*xLKIM-wldyYfPGGgdxIcDA.png)
+
 #### 2) LocalExecutor
 
 - **Description**: 
@@ -53,6 +55,8 @@ Celery is a powerful tool for handling asynchronous tasks in Python and beyond. 
 - **Parallelism**: 
  
     - Achieves high levels of parallelism by distributing tasks among a pool of Celery workers, supporting dynamic scaling based on workload demands.
+
+    ![](https://miro.medium.com/v2/resize:fit:1400/1*dlQpAZ4S3UYxpM-U2E7ihw.png)
 
     ![](https://miro.medium.com/v2/resize:fit:2000/1*avBjYUY6ZtfEyTkk7FI8JQ.png)
 
