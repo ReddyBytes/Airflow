@@ -19,7 +19,7 @@ This compose file is with CeleryExecutor
     
     curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.9.1/docker-compose.yaml'
 
-if you want to use LocalExecutor change docker compose file with [this](/Airflow_Installation/docker-compose.yml)
+if you want to use LocalExecutor change docker compose file with [this](/1-Airflow_Installation/docker-compose-LocalExecutor.yml)
 
 __Step 4 :__ Setup the necessary parent directories and user permissions to create DAGS in the current directory.
   

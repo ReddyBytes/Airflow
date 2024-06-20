@@ -12,10 +12,10 @@
         a) [DAGS](/README.md#dag-directed-acyclic-graph)  
         b) [operators](/README.md#operators)
 4) [How airflow works and limitations](/README.md#how-airflow-works)
-1) [Airflow installation Guide](/Airflow_Installation/Installation_Guide.md)  
-2) [Postgres connection to airflow](/DAGS/Postgres_Operator/Notes.md)  
-3) [S3 connection to Airflow]()  
-4) [S3 Sensors](/DAGS/S3_Operator/S3_Sensors.py)  
+1) [Airflow installation Guide](/1-Airflow_Installation/Installation_Guide.md)  
+2) [Postgres Operator to airflow](/2-DAGS-&-Operators/Postgres_Operator/Readme.md)  
+3) [S3 Operator to Airflow](/2-DAGS-&-Operators/S3_Operator/)  
+4) [Sensors](/3-Sensors/)  
 
 # Why We Use Airflow
 

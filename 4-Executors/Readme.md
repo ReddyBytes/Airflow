@@ -40,6 +40,8 @@
 
 #### 3) CeleryExecutor
 
+Celery is a powerful tool for handling asynchronous tasks in Python and beyond. Its flexibility, scalability, and robustness make it suitable for a wide range of applications, from web scraping to data processing pipelines.
+
 - **Description**: 
     - Utilizes Celery as a distributed task queue to execute tasks asynchronously. 
     - It integrates with Celery workers, allowing tasks to be distributed across multiple worker nodes.
@@ -51,6 +53,11 @@
 - **Parallelism**: 
  
     - Achieves high levels of parallelism by distributing tasks among a pool of Celery workers, supporting dynamic scaling based on workload demands.
+
+    ![](https://miro.medium.com/v2/resize:fit:2000/1*avBjYUY6ZtfEyTkk7FI8JQ.png)
+
+     __Flower :__  is a webserver to manage the celery worker nodes etc., runs on port 5555
+     ![](https://tests4geeks.com/blog/wp-content/uploads/2016/04/celery-flower.gif) 
 
 #### 4) KubernetesExecutor
 
