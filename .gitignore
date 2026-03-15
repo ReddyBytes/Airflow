@@ -1,0 +1,45 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Airflow local runtime
+logs/
+plugins/
+config/airflow.cfg
+airflow.db
+standalone_admin_password.txt
+
+# Docker
+.docker/
+
+# Environment
+.env
+.env.*
+*.env
+
+# Claude
+CLAUDE.md

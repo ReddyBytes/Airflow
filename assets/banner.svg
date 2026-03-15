@@ -1,0 +1,127 @@
+<svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#0f0f1a"/>
+      <stop offset="50%"  style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0d0d1f"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#FF6B35"/>
+      <stop offset="60%"  style="stop-color:#F59E0B"/>
+      <stop offset="100%" style="stop-color:#FF6B35"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#FF6B35;stop-opacity:0"/>
+      <stop offset="50%"  style="stop-color:#F59E0B"/>
+      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   style="stop-color:#2a1f0e"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="240" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.04" stroke="#FF6B35" stroke-width="0.5">
+    <line x1="0" y1="60"  x2="900" y2="60"/>
+    <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="180" x2="900" y2="180"/>
+    <line x1="150" y1="0" x2="150" y2="240"/>
+    <line x1="300" y1="0" x2="300" y2="240"/>
+    <line x1="450" y1="0" x2="450" y2="240"/>
+    <line x1="600" y1="0" x2="600" y2="240"/>
+    <line x1="750" y1="0" x2="750" y2="240"/>
+  </g>
+
+  <!-- Pipeline DAG nodes — bottom row -->
+  <!-- Node 1: Trigger -->
+  <rect x="28" y="168" width="90" height="36" rx="6" fill="url(#nodeGrad)" stroke="#FF6B35" stroke-width="1.5"/>
+  <text x="73" y="191" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#FF6B35" letter-spacing="1">⚡ Trigger</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="118" y1="186" x2="148" y2="186" stroke="#FF6B35" stroke-width="1.5" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="148,182 156,186 148,190" fill="#FF6B35" opacity="0.8"/>
+
+  <!-- Node 2: Extract -->
+  <rect x="156" y="168" width="90" height="36" rx="6" fill="url(#nodeGrad)" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="201" y="191" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#F59E0B" letter-spacing="1">📥 Extract</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="246" y1="186" x2="276" y2="186" stroke="#F59E0B" stroke-width="1.5" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="276,182 284,186 276,190" fill="#F59E0B" opacity="0.8"/>
+
+  <!-- Node 3: Transform -->
+  <rect x="284" y="168" width="100" height="36" rx="6" fill="url(#nodeGrad)" stroke="#FF6B35" stroke-width="1.5"/>
+  <text x="334" y="191" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#FF6B35" letter-spacing="1">⚙️ Transform</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="384" y1="186" x2="414" y2="186" stroke="#FF6B35" stroke-width="1.5" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="414,182 422,186 414,190" fill="#FF6B35" opacity="0.8"/>
+
+  <!-- Node 4: Load -->
+  <rect x="422" y="168" width="80" height="36" rx="6" fill="url(#nodeGrad)" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="462" y="191" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#F59E0B" letter-spacing="1">💾 Load</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="502" y1="186" x2="532" y2="186" stroke="#F59E0B" stroke-width="1.5" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.9s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="532,182 540,186 532,190" fill="#F59E0B" opacity="0.8"/>
+
+  <!-- Node 5: Validate -->
+  <rect x="540" y="168" width="90" height="36" rx="6" fill="url(#nodeGrad)" stroke="#FF6B35" stroke-width="1.5"/>
+  <text x="585" y="191" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#FF6B35" letter-spacing="1">✅ Validate</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="630" y1="186" x2="660" y2="186" stroke="#FF6B35" stroke-width="1.5" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="1.2s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="660,182 668,186 660,190" fill="#FF6B35" opacity="0.8"/>
+
+  <!-- Node 6: Notify -->
+  <rect x="668" y="168" width="90" height="36" rx="6" fill="url(#nodeGrad)" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="713" y="191" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#F59E0B" letter-spacing="1">🔔 Notify</text>
+
+  <!-- Animated top accent bar -->
+  <rect x="200" y="42" width="500" height="1.5" fill="url(#arrowGrad)" rx="1">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Main title -->
+  <text x="450" y="96" text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="18" font-weight="bold"
+        fill="#94a3b8" letter-spacing="8">APACHE</text>
+
+  <text x="450" y="155" text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="64" font-weight="bold"
+        fill="url(#titleGrad)" filter="url(#glow)" letter-spacing="12">AIRFLOW</text>
+
+  <!-- Animated bottom accent bar -->
+  <rect x="200" y="160" width="500" height="1.5" fill="url(#arrowGrad)" rx="1">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Subtitle -->
+  <text x="450" y="222" text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="11" fill="#64748b" letter-spacing="4">WORKFLOW ORCHESTRATION  ·  ZERO TO PRODUCTION</text>
+</svg>
