@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Auth Manager Interface](#the-auth-manager-interface) · [Auth Flow](#auth-flow) · [Available Auth Managers](#available-auth-managers)
+
+**Should Learn** — important for real projects and interviews:
+[FAB Auth Manager](#fab-auth-manager-airflow-2-compatible--now-a-provider) · [JWT API Authentication](#api-authentication-jwt-tokens) · [Migrating from Airflow 2](#migrating-from-airflow-2-fab-auth-to-airflow-3)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Custom Auth Manager](#custom-auth-manager) · [Multi-Tenancy Support](#multi-tenancy-support)
+
+**Reference** — skim once, look up when needed:
+[RBAC Roles Table](#rbac-with-the-new-auth-manager) · [Simple Auth Manager](#simple-auth-manager-new-in-airflow-3--development-default)
+
+---
+
 ## The Story
 
 Airflow 2 used Flask AppBuilder (FAB) for auth — powerful but tightly coupled. Authentication, authorization, user management, and role definitions were all baked into FAB's data model and embedded in the Webserver. Swapping to LDAP meant configuring FAB's LDAP integration. Adding SAML meant FAB's SAML plugin. Custom SSO meant extending FAB views.

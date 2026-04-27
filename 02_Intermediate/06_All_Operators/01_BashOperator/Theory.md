@@ -12,6 +12,22 @@ Think of it like hiring a contractor who knows exactly one thing: running shell 
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What BashOperator Does](#what-bashoperator-does) · [bash_command Parameter](#the-bash_command-parameter) · [Error Handling](#error-handling)
+
+**Should Learn** — important for real projects and interviews:
+[Environment Variables](#environment-variables) · [XCom from Bash](#getting-output-back-xcom-from-bash) · [When to Use BashOperator](#when-to-use-bashoperator)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Working Directory](#working-directory)
+
+**Reference** — skim once, look up when needed:
+[Full Working Code Example](#full-working-code-example)
+
+---
+
 ## What BashOperator Does
 
 When Airflow runs a BashOperator task, it:

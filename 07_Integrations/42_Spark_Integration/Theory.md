@@ -4,6 +4,16 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Architecture Overview](#architecture-overview) · [Option 1 SparkSubmitOperator](#option-1-sparksubmitoperator-local--yarn--kubernetes) · [When to Use Each Operator](#when-to-use-each-operator)
+
+**Should Learn** — important for real projects and interviews:
+[Option 2 AWS EMR Operators](#option-2-aws-emr-operators) · [Option 3 DatabricksRunNowOperator](#option-3-databricksrunnowoperator)
+
+---
+
 ## The Story
 
 You have a Spark job that processes 500GB of raw logs into aggregated metrics. It takes 45 minutes. You need it to run every day after raw data lands in S3.

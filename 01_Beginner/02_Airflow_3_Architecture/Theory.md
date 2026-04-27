@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Why Architecture Changed](#why-the-architecture-changed) · [Scheduler](#1-scheduler) · [DAG Processor](#3-dag-processor-new-as-standalone-in-airflow-3) · [Internal API](#4-internal-api-new-in-airflow-3)
+
+**Should Learn** — important for real projects and interviews:
+[API Server](#2-api-server-new-in-airflow-3) · [Airflow 2 vs 3 Comparison](#airflow-2-vs-airflow-3--what-changed) · [Common Mistakes](#common-mistakes)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Triggerer](#8-triggerer) · [Edge Executor](#10-edge-executor-new-in-airflow-3) · [Message Broker](#9-message-broker-celeryexecutor-only)
+
+**Reference** — skim once, look up when needed:
+[Component Quick Reference](#component-quick-reference) · [Architecture Diagrams](#architecture-diagrams)
+
+---
+
 ## The Restaurant Chain Analogy
 
 Think of Airflow like a restaurant chain's central operations system.

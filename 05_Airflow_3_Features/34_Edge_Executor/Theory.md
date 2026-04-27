@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is the Edge Executor](#what-is-the-edge-executor) · [Architecture](#architecture) · [Assigning Tasks to Edge Workers](#assigning-tasks-to-edge-workers)
+
+**Should Learn** — important for real projects and interviews:
+[Configuration](#configuration) · [Comparison Executor Types](#comparison-executor-types)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Use Cases](#use-cases)
+
+**Reference** — skim once, look up when needed:
+[Limitations](#limitations)
+
+---
+
 ## The Story
 
 Your company has data engineers running pipelines on laptops, IoT devices, and remote servers that can't run a full Airflow cluster. You have a factory floor with a local server that runs quality control checks on sensor data — but that server has no reliable connection to your central database and can't run a Celery broker. You have a data science team with GPU workstations that need to run ML training tasks locally.

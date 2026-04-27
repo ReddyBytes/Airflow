@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Architecture Changes](#architecture-changes) · [New Components Breakdown](#component-breakdown) · [What Was Removed](#what-was-removed)
+
+**Should Learn** — important for real projects and interviews:
+[Breaking Changes Table](#breaking-changes-table) · [Migration Checklist](#migration-checklist) · [Assets Renamed](#assets-formerly-datasets)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Edge Executor](#edge-executor) · [TaskFlow API Improvements](#taskflow-api-improvements) · [New React UI](#new-react-ui)
+
+**Reference** — skim once, look up when needed:
+[Airflow 2 vs 3 Comparison Table](#airflow-2-vs-airflow-3-full-comparison-table)
+
+---
+
 ## The Story
 
 Airflow 3 is the biggest architectural overhaul since Airflow 2. The core team rebuilt how components communicate, how DAGs are parsed, and how the UI works. If you're upgrading from Airflow 2, this section tells you exactly what changed and why.

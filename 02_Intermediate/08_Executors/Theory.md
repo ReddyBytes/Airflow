@@ -12,6 +12,19 @@ The answer depends on the executor you configure.
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is an Executor](#what-is-an-executor) · [The Four Main Executors](#the-four-main-executors) · [What Every Executor Has in Common](#what-every-executor-has-in-common)
+
+**Should Learn** — important for real projects and interviews:
+[How to Choose](#how-to-choose)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Sub-Topics in This Section](#sub-topics-in-this-section)
+
+---
+
 ## What Is an Executor?
 
 The executor is a component of the Airflow scheduler that determines **how and where tasks run**.

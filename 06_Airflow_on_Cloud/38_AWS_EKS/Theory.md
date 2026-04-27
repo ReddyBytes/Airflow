@@ -4,6 +4,19 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Architecture](#architecture) · [Component Deep-Dive](#component-deep-dive) · [Executor Choice](#executor-choice)
+
+**Should Learn** — important for real projects and interviews:
+[Why EKS Over MWAA](#why-eks-over-mwaa) · [IRSA AWS Credentials Without Secrets](#irsa-aws-credentials-without-secrets)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Monitoring](#monitoring)
+
+---
+
 ## The Story
 
 You've been running Airflow on your laptop with Docker Compose. It works perfectly for developing DAGs. Then your manager says: *"We need this running 24/7, processing 500 tasks a day."*
@@ -206,6 +219,7 @@ config:
     statsd_prefix: "airflow"
 ```
 
+🚀 **Apply this:** Deploy Airflow on Kubernetes with Helm → [Project 10 — Airflow on Kubernetes](../../09_Capstone_Projects/10_Airflow_on_Kubernetes/01_MISSION.md)
 ---
 
 ## See Also

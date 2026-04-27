@@ -10,6 +10,19 @@ You could write the filename to a database, or to a shared file, or create a sid
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is an XCom](#what-is-an-xcom) · [xcom_push and xcom_pull](#xcom_push-and-xcom_pull) · [XCom Limitations](#xcom-limitations)
+
+**Should Learn** — important for real projects and interviews:
+[TaskFlow API Style](#taskflow-api-style-airflow-20) · [Multiple Values and Keys](#multiple-values-and-keys)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[XCom Cleanup](#xcom-cleanup) · [How the Data Flows](#how-the-data-flows)
+
+---
+
 ## What Is an XCom?
 
 An **XCom** is a key-value record stored in the `xcom` table of Airflow's metadata database. Each record is identified by:
@@ -150,6 +163,7 @@ XComs accumulate in the metadata DB over time. Airflow clears them when you clea
 - For large data, write to external storage and pass the path as an XCom.
 - Each DAG run has its own XCom scope — parallel runs don't interfere.
 
+🚀 **Apply this:** Pass data between tasks in a real pipeline → [Project 03 — Data Quality Pipeline](../../09_Capstone_Projects/03_Data_Quality_Pipeline/01_MISSION.md)
 ---
 
 ## Navigation

@@ -15,6 +15,22 @@ This is especially valuable when:
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How HttpSensor Works](#how-httpsensor-works) · [response_check](#response_check) · [HTTP Connection Setup](#prerequisites-setting-up-the-http-connection)
+
+**Should Learn** — important for real projects and interviews:
+[Key Parameters](#key-parameters) · [Full Working Example](#full-working-code-example)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[When to Use HttpSensor](#when-to-use-httpsensor)
+
+**Reference** — skim once, look up when needed:
+[Navigation](#navigation)
+
+---
+
 ## How HttpSensor Works
 
 `HttpSensor` makes an HTTP request to the endpoint on each `poke()`. It determines success based on the HTTP status code and an optional custom `response_check` function.

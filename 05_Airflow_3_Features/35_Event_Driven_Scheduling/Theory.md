@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Forms of Event-Driven Scheduling in Airflow 3](#forms-of-event-driven-scheduling-in-airflow-3) · [REST API Triggers](#1-rest-api-triggers-webhook-pattern) · [Asset-Driven Scheduling](#2-asset-driven-scheduling-data-events)
+
+**Should Learn** — important for real projects and interviews:
+[Custom Triggers Deferrable Operators](#3-custom-triggers-deferrable-operators) · [DAG Run Configuration](#dag-run-configuration-passing-event-data)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Webhook Integration Patterns](#webhook-integration-patterns)
+
+**Reference** — skim once, look up when needed:
+[Comparison Scheduling Approaches](#comparison-scheduling-approaches)
+
+---
+
 ## The Story
 
 A new file lands in S3. A Kafka message arrives. An API sends a webhook. In Airflow 3, these external events can directly trigger DAG runs — no polling, no fixed schedules, just react to what happens.
@@ -329,6 +345,7 @@ with DAG("event_pipeline", schedule=None) as dag:
         print(f"Event data: {conf}")
 ```
 
+🚀 **Apply this:** Replace sensors with Asset triggers → [Project 06 — Event-Driven Asset Pipeline](../../09_Capstone_Projects/06_Event_Driven_Asset_Pipeline/01_MISSION.md)
 ---
 
 ## Navigation

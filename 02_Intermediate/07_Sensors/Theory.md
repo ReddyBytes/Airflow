@@ -10,6 +10,22 @@ You could write a Python function with a `while` loop and a `time.sleep()`. But 
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is a Sensor](#what-is-a-sensor) · [poke vs reschedule](#the-two-modes-poke-vs-reschedule) · [timeout vs poke_interval](#timeout-vs-poke_interval)
+
+**Should Learn** — important for real projects and interviews:
+[Key Parameters](#key-parameters) · [Sensor Types Overview](#sensor-types-overview) · [soft_fail](#soft_fail-timeout-without-failing)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[When to Use Sensors vs Operators](#when-to-use-sensors-vs-operators)
+
+**Reference** — skim once, look up when needed:
+[Key Takeaways](#key-takeaways)
+
+---
+
 ## What Is a Sensor?
 
 A sensor is a special type of operator that:

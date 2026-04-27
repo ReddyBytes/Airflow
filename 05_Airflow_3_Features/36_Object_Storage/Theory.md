@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[The ObjectStoragePath API](#the-objectstoragepath-api) · [Core Operations](#core-operations) · [Supported Backends](#supported-backends)
+
+**Should Learn** — important for real projects and interviews:
+[Using ObjectStoragePath in Operators](#using-objectstoragepath-in-operators) · [Comparison with Direct Backend APIs](#comparison-with-direct-backend-apis)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Environment-Aware Paths](#environment-aware-paths-dev-vs-prod-pattern)
+
+**Reference** — skim once, look up when needed:
+[Copying Between Backends](#copying-between-backends)
+
+---
+
 ## The Story
 
 In Airflow 2, reading a file from S3 meant importing boto3. Reading from GCS meant importing the Google Cloud Storage client. Reading from Azure Blob meant the Azure SDK. Every provider had its own API, its own auth pattern, its own error handling. Your DAG code was coupled to the storage backend.

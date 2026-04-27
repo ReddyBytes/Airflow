@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is EdgeExecutor](#what-is-edgeexecutor) · [Architecture](#architecture) · [How EdgeExecutor Differs from Other Executors](#how-edgeexecutor-differs-from-other-executors)
+
+**Should Learn** — important for real projects and interviews:
+[Setting Up EdgeExecutor](#setting-up-edgeexecutor) · [Routing Tasks to Specific Edge Workers](#routing-tasks-to-specific-edge-workers)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Use Cases](#use-cases) · [Security Considerations](#security-considerations)
+
+**Reference** — skim once, look up when needed:
+[Limitations and Considerations](#limitations-and-considerations)
+
+---
+
 ## The Story: Airflow at the Edge
 
 Your company operates 200 retail stores, each with a local server that processes point-of-sale data, manages local inventory, and runs quality checks. The stores have unreliable internet — sometimes connected, sometimes not. But the data pipelines must keep running regardless.

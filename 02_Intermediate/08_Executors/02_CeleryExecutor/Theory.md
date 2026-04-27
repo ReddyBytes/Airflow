@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is CeleryExecutor](#what-is-celeryexecutor) · [Architecture](#architecture) · [Components in Detail](#components-in-detail)
+
+**Should Learn** — important for real projects and interviews:
+[Configuration](#configuration) · [Celery Queues](#celery-queues) · [Scaling Workers](#scaling-workers)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Monitoring with Flower](#monitoring-with-flower) · [Docker Compose Setup](#docker-compose-setup)
+
+**Reference** — skim once, look up when needed:
+[CeleryExecutor vs LocalExecutor vs KubernetesExecutor](#celeryexecutor-vs-localexecutor-vs-kubernetesexecutor)
+
+---
+
 ## The Story: You Have Outgrown One Machine
 
 Your Airflow deployment started small. A single VM, LocalExecutor, PostgreSQL — done. It handled 20 concurrent tasks comfortably. But your data platform has grown. You now have 15 data engineering teams, 200 DAGs, and peak hours where 150 tasks queue up simultaneously. Your scheduler machine has 16 CPUs and is pegged at 100% during peak windows. Tasks that should run in 10 minutes are sitting in the queue for 40 minutes waiting for a slot.

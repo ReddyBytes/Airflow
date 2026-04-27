@@ -14,6 +14,22 @@ Each operator is a **specialist**. You assign them a task, they do their job, an
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is an Operator](#what-is-an-operator) · [The 4 Types of Operators](#the-4-types-of-operators) · [BaseOperator](#the-baseoperator-the-parent-of-all-operators)
+
+**Should Learn** — important for real projects and interviews:
+[Operator Lifecycle](#operator-lifecycle) · [How to Choose the Right Operator](#how-to-choose-the-right-operator)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Custom Operators](#custom-operators)
+
+**Reference** — skim once, look up when needed:
+[Key Takeaways](#key-takeaways)
+
+---
+
 ## What Is an Operator?
 
 In Apache Airflow, an **operator** defines a single unit of work in a DAG. When you write a DAG, each node in the graph is a task — and each task is powered by an operator.

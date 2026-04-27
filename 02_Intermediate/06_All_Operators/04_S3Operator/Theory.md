@@ -10,6 +10,22 @@ Think of it like a logistics team. Your pipeline produces boxes (files), and the
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Setting Up AWS Connection](#prerequisites-setting-up-the-aws-connection) · [LocalFilesystemToS3Operator](#localfilesystemtos3operator) · [IAM Permissions](#iam-permissions-required)
+
+**Should Learn** — important for real projects and interviews:
+[S3CopyObjectOperator](#s3copyobjectoperator) · [S3DeleteObjectsOperator](#s3deleteobjectoperator) · [When to Use S3 Operators](#when-to-use-s3-operators)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[S3FileTransformOperator](#s3filetransformoperator) · [IAM Role Auth](#or-use-iam-role-recommended-for-ec2ecse)
+
+**Reference** — skim once, look up when needed:
+[Full Working Code Example](#full-working-code-example) · [S3CreateBucketOperator](#s3createbucketoperator)
+
+---
+
 ## Prerequisites: Setting Up the AWS Connection
 
 Before you can use any S3 operator, you need to configure AWS credentials in Airflow.

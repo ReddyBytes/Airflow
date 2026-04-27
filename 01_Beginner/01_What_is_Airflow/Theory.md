@@ -2,6 +2,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What is Airflow](#what-is-apache-airflow) · [How It Works](#how-it-works--step-by-step) · [DAG concept](#dag--the-central-concept) · [Task concept](#task--the-unit-of-work)
+
+**Should Learn** — important for real projects and interviews:
+[Why It Exists](#why-it-exists) · [Core Components](#core-components) · [Common Mistakes](#common-mistakes-)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Real-World Usage](#real-world-usage) · [DAG Lifecycle](#dag-lifecycle)
+
+**Reference** — skim once, look up when needed:
+[Architecture Overview](#architecture-overview) · [Connection to Other Concepts](#connection-to-other-concepts-)
+
+---
+
 ## The Story 📖
 
 Imagine you are the head chef at a busy restaurant. Every morning, dozens of dishes need to be prepared — soups, mains, desserts — each with their own recipe, their own timing, and their own dependencies. The dessert cannot be plated before the main course is cooked. The sauce must be reduced before it can be poured.
@@ -281,6 +297,7 @@ Get Airflow running on your machine. Section 02 walks you through the full setup
 
 ---
 
+🚀 **Apply this:** Build your first real ETL pipeline → [Project 01 — Forex ETL Pipeline](../../09_Capstone_Projects/01_Forex_ETL_Pipeline/01_MISSION.md)
 ## 📂 Navigation
 
 ⬅️ **Prev:** [Progress Tracker](../00_Learning_Guide/Progress_Tracker.md) | 🏠 **[Home](../00_Learning_Guide/Learning_Path.md)** | ➡️ **Next:** [02 · Installation & Setup — Theory](../02_Installation_and_Setup/Theory.md)

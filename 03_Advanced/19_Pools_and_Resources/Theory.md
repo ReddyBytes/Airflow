@@ -2,6 +2,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What is a Pool](#what-is-a-pool) · [Assigning Tasks to Pools](#assigning-tasks-to-pools) · [Creating Pools](#creating-pools)
+
+**Should Learn** — important for real projects and interviews:
+[priority_weight](#priority_weight) · [Pools vs Other Concurrency Controls](#pools-vs-other-concurrency-controls) · [Practical Use Cases](#practical-use-cases)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[pool_slots Parameter](#pool_slots-parameter) · [The queue Parameter](#the-queue-parameter)
+
+**Reference** — skim once, look up when needed:
+[Common Mistakes](#common-mistakes) · [How Pools Work — The Full Flow](#how-pools-work----the-full-flow)
+
+---
+
 ## The Story
 
 It is 2 AM. Your Airflow scheduler triggers a DAG that kicks off 20 parallel tasks, and every single one of them tries to open a connection to the same production PostgreSQL database. The database has a connection limit of 10. It immediately starts rejecting connections. Tasks fail. Retries pile up. More connection attempts fire. The database crashes. Your on-call phone rings.

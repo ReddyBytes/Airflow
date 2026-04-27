@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[BaseOperator Contract](#the-baseoperator-contract) · [execute Method](#minimal-custom-operator) · [BaseHook Contract](#basehook-contract) · [Custom Sensor poke](#3-building-a-custom-sensor)
+
+**Should Learn** — important for real projects and interviews:
+[template_fields](#template_fields) · [Sensor Modes](#sensor-modes) · [Testing Operators](#5-testing-custom-operators)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[ui_color and ui_fgcolor](#ui_color-and-ui_fgcolor) · [Plugin System Diagram](#plugin-system-architecture-diagram)
+
+**Reference** — skim once, look up when needed:
+[Packaging Options](#4-packaging-for-reuse)
+
+---
+
 ## The Story
 
 Your company uses an internal data platform — call it "DataForge" — that has no Airflow provider. You could use `BashOperator` with `curl` commands: they'd work, but every DAG author would need to know the exact API endpoint, auth header format, retry logic, and error codes. One change to the DataForge API breaks every DAG simultaneously. Instead, you build a `DataForgeOperator` with a clean interface, proper error handling, and full Airflow integration. DAG authors write `DataForgeOperator(task_id="run_job", job_name="{{ job_name }}")` and never think about HTTP.

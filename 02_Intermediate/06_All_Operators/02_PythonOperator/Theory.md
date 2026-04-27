@@ -14,6 +14,22 @@ The mental model is simple: you define a regular Python function, you hand it to
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How PythonOperator Works](#how-pythonoperator-works) · [python_callable Parameter](#the-python_callable-parameter) · [Returning Values for XCom](#returning-values-for-xcom)
+
+**Should Learn** — important for real projects and interviews:
+[op_args and op_kwargs](#passing-arguments-op_args-and-op_kwargs) · [Accessing Task Context](#accessing-task-context) · [When to Use PythonOperator](#when-to-use-pythonoperator)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Full Working Code Example](#full-working-code-example)
+
+**Reference** — skim once, look up when needed:
+[Context Keys Table](#accessing-task-context)
+
+---
+
 ## How PythonOperator Works
 
 ```mermaid

@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Why Remote Logging](#1-local-logging-default) · [Remote Logging Config](#2-remote-logging-configuration) · [S3 Logging Setup](#3-s3-logging)
+
+**Should Learn** — important for real projects and interviews:
+[GCS Logging](#4-gcs-logging) · [Log Retention and Cleanup](#7-log-retention-and-cleanup) · [Viewing Logs in UI](#8-viewing-remote-logs-in-the-ui)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Azure Blob Logging](#5-azure-blob-storage-logging) · [Elasticsearch Logging](#6-elasticsearch-logging)
+
+**Reference** — skim once, look up when needed:
+[S3 IAM Permissions](#required-iam-permissions) · [S3 Lifecycle Policy](#s3-lifecycle-policy)
+
+---
+
 ## The Story
 
 Your Airflow tasks are running on Kubernetes pods that disappear after execution. The pod that ran your task 5 hours ago is gone. So are the logs — unless you configured remote logging. With remote logging, every task log line is streamed to S3, GCS, or Azure Blob in real time. The Airflow UI reads from the remote store transparently. Logs persist indefinitely, are searchable, and are accessible even after workers restart, scale down, or crash.

@@ -64,7 +64,7 @@ Airflow/
 ├── 05_Airflow_3_Features/       🔵 Modules 30–36
 ├── 06_Airflow_on_Cloud/         ☁️  Modules 37–40
 ├── 07_Integrations/             🔗 Modules 41–44
-└── 08_Projects/                 🏗️ 6 end-to-end projects
+└── 09_Capstone_Projects/                 🏗️ 6 end-to-end projects
 ```
 
 ---

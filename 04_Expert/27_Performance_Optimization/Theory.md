@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Performance Bottlenecks Overview](#1-understanding-the-performance-bottlenecks) · [Avoid Top-Level DB Calls](#avoid-top-level-db-calls) · [Sensor reschedule Mode](#6-sensor-optimization)
+
+**Should Learn** — important for real projects and interviews:
+[Scheduler Parsing Tuning](#parsing-tuning) · [Pool Slots](#pool-slots) · [Database Optimization](#5-database-optimization) · [DAG Factory Pattern](#dag-factories-instead-of-many-files)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[DAG Processor in Airflow 3](#3-dag-processor-airflow-3) · [Monitoring Scheduler Lag](#8-monitoring-scheduler-lag)
+
+**Reference** — skim once, look up when needed:
+[Worker Concurrency Config](#4-worker-concurrency) · [PostgreSQL autovacuum Tuning](#postgresql-autovacuum-tuning)
+
+---
+
 ## The Story
 
 Your Airflow cluster runs 1000 DAGs. The scheduler is lagging — tasks submitted at 10:00 don't start running until 10:05. The task queue fills up. The UI times out loading the DAG list. New DAGs take 3 minutes to appear after being added. Your on-call rotation is getting pages every night. Performance tuning is the difference between a reliable data platform and a frustrating one that erodes trust.

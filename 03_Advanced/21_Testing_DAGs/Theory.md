@@ -12,6 +12,22 @@ A simple import test would have caught this in the CI pipeline in 2 seconds.
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Types of Tests](#types-of-tests) · [DAGBag Loading Test](#dagbag-loading-test) · [Mocking External Connections](#mocking-external-connections)
+
+**Should Learn** — important for real projects and interviews:
+[Unit Testing PythonOperator Callables](#unit-testing-pythonoperator-callables) · [CI/CD Integration](#cicd-integration-github-actions)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[pytest Setup for Airflow](#pytest-setup-for-airflow)
+
+**Reference** — skim once, look up when needed:
+[Key Takeaways](#key-takeaways)
+
+---
+
 ## Types of Tests
 
 ### 1. Import Test (DAGBag Test)

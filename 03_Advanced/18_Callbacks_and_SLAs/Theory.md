@@ -12,6 +12,22 @@ This is a preventable situation. **Callbacks are your automatic notification sys
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Callback Types](#callback-types) · [DAG-Level vs Task-Level Callbacks](#dag-level-vs-task-level-callbacks) · [The context Dict](#the-context-dict-whats-inside)
+
+**Should Learn** — important for real projects and interviews:
+[SLAs](#slas-service-level-agreements) · [Practical Patterns](#practical-patterns)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Callback Trigger Points Diagram](#callback-trigger-points----mermaid-diagram)
+
+**Reference** — skim once, look up when needed:
+[Key Takeaways](#key-takeaways)
+
+---
+
 ## Callback Types
 
 ### on_failure_callback

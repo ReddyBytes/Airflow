@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Are Params](#what-are-params) · [Defining Params](#defining-params) · [Accessing Params in Tasks](#accessing-params-in-tasks)
+
+**Should Learn** — important for real projects and interviews:
+[Overriding Params at Runtime](#overriding-params-at-runtime) · [dag_run.conf vs params The Key Difference](#dag_runconf-vs-params--the-key-difference) · [Param Types](#param-types)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[New in Airflow 3 Improved Params UI](#new-in-airflow-3-improved-params-ui) · [Advanced Task-Level Params](#advanced-task-level-params)
+
+**Reference** — skim once, look up when needed:
+[Complete Working Example](#complete-working-example)
+
+---
+
 ## The Story: Reprocessing Without Touching Code
 
 Your ETL DAG runs every night and processes yesterday's data. It works perfectly. Then one morning your manager walks in: "We found a data quality issue from last quarter. Can you reprocess January through March?"

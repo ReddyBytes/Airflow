@@ -12,6 +12,22 @@ Think of it like a manager delegating work. The manager's DAG runs, identifies w
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[When to Use TriggerDagRunOperator](#when-to-use-triggerdagrunoperator) · [conf Parameter](#conf--passing-data-to-the-triggered-dag) · [wait_for_completion](#wait_for_completion)
+
+**Should Learn** — important for real projects and interviews:
+[Cross-DAG Communication Patterns](#cross-dag-communication-patterns) · [Full Working Example](#full-working-code-example)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[reset_dag_run](#reset_dag_run) · [execution_date](#execution_date)
+
+**Reference** — skim once, look up when needed:
+[Important Notes](#important-notes)
+
+---
+
 ## When to Use TriggerDagRunOperator
 
 This operator is perfect for:

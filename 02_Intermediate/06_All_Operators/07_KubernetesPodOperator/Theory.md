@@ -1,7 +1,24 @@
 # KubernetesPodOperator in Apache Airflow 3
 
+🚀 **Apply this:** Run ML training in a K8s pod → [Project 05 — ML Training Pipeline](../../09_Capstone_Projects/05_ML_Training_Pipeline/01_MISSION.md)
 ## 📂 Navigation
 ⬅️ **Prev:** | 🏠 **[Home](../../../00_Learning_Guide/Learning_Path.md)** | ➡️ **Next: [Code Examples](./Code_Example.md)**
+
+---
+
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is KubernetesPodOperator](#what-is-kubernetespodoperator) · [Key Parameters](#key-parameters) · [in_cluster Setup](#airflow-running-inside-kubernetes-in_clustertrue)
+
+**Should Learn** — important for real projects and interviews:
+[Resource Configuration](#resource-configuration) · [XCom Push from a Pod](#xcom-push-from-a-pod) · [KPO vs DockerOperator](#when-to-use-kubernetespodoperator-vs-dockeroperator)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Environment Variables](#environment-variables) · [KPO Lifecycle](#mermaid-kubernetespodoperator-lifecycle)
+
+**Reference** — skim once, look up when needed:
+[Setup](#setup)
 
 ---
 

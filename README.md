@@ -50,7 +50,7 @@ Every topic follows the same format:
 | 🔵 **05** | [Airflow 3 Features](./05_Airflow_3_Features/) | Assets, DAG Versioning, Auth Manager, Edge Executor, Object Storage | Airflow 3 | 10–12 hrs |
 | ☁️ **06** | [Airflow on Cloud](./06_Airflow_on_Cloud/) | AWS EKS, MWAA, GCP Composer, Cloud Patterns | Cloud | 8–10 hrs |
 | 🔗 **07** | [Integrations](./07_Integrations/) | dbt, Spark, Great Expectations, KubernetesPodOperator | Integration | 8–10 hrs |
-| 🏗️ **08** | [Projects](./08_Projects/) | Forex ETL, File Processing, API Ingestion, ML Pipeline, Multi-Cloud | Projects | 15+ hrs |
+| 🏗️ **08** | [Projects](./09_Capstone_Projects/) | Forex ETL, File Processing, API Ingestion, ML Pipeline, Multi-Cloud | Projects | 15+ hrs |
 
 **Total: ~90–100 hours of structured learning**
 
@@ -273,12 +273,12 @@ Every topic follows the same format:
 
 | Project | Level | What You Build |
 |---------|-------|----------------|
-| [Forex ETL Pipeline](./08_Projects/01_Beginner_Projects/01_Forex_ETL_Pipeline/) | Beginner | Download forex rates → transform → load to Postgres |
-| [File Processing Pipeline](./08_Projects/01_Beginner_Projects/02_Simple_File_Processing/) | Beginner | Watch a folder, process CSV files, archive results |
-| [API Ingestion Pipeline](./08_Projects/02_Intermediate_Projects/) | Intermediate | Pull from REST API daily, deduplicate, store in warehouse |
-| [dbt + Airflow Pipeline](./08_Projects/02_Intermediate_Projects/) | Intermediate | Orchestrate dbt models end-to-end |
-| [ML Training Pipeline](./08_Projects/03_Advanced_Projects/) | Advanced | Airflow-orchestrated ML: ingest → train → evaluate → register |
-| [Multi-Cloud ETL](./08_Projects/03_Advanced_Projects/) | Advanced | Cross-cloud data movement with error handling and SLAs |
+| [Forex ETL Pipeline](./09_Capstone_Projects/01_Beginner_Projects/01_Forex_ETL_Pipeline/) | Beginner | Download forex rates → transform → load to Postgres |
+| [File Processing Pipeline](./09_Capstone_Projects/01_Beginner_Projects/02_Simple_File_Processing/) | Beginner | Watch a folder, process CSV files, archive results |
+| [API Ingestion Pipeline](./09_Capstone_Projects/02_Intermediate_Projects/) | Intermediate | Pull from REST API daily, deduplicate, store in warehouse |
+| [dbt + Airflow Pipeline](./09_Capstone_Projects/02_Intermediate_Projects/) | Intermediate | Orchestrate dbt models end-to-end |
+| [ML Training Pipeline](./09_Capstone_Projects/03_Advanced_Projects/) | Advanced | Airflow-orchestrated ML: ingest → train → evaluate → register |
+| [Multi-Cloud ETL](./09_Capstone_Projects/03_Advanced_Projects/) | Advanced | Cross-cloud data movement with error handling and SLAs |
 
 </details>
 

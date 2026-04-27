@@ -12,6 +12,19 @@ Store your config once — bucket names, environment flags, API endpoints, thres
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is an Airflow Variable](#what-is-an-airflow-variable) · [Using Variables in DAGs](#using-variables-in-dags)
+
+**Should Learn** — important for real projects and interviews:
+[Setting Variables](#setting-variables) · [Best Practices](#best-practices) · [Jinja Templating for Variables](#jinja-templating-for-variables)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[The Problem with Hardcoding vs Using Variables](#the-problem-with-hardcoding-vs-using-variables)
+
+---
+
 ## What Is an Airflow Variable?
 
 An **Airflow Variable** is a simple key-value pair stored in the metadata database. Keys are strings; values are strings (but you can store JSON and parse it as a dict or list).

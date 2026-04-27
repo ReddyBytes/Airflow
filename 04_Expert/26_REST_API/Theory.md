@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[API Server in Airflow 3](#1-the-api-server-in-airflow-3) · [JWT Authentication](#jwt-token-recommended) · [Trigger DAG Run](#dag-runs)
+
+**Should Learn** — important for real projects and interviews:
+[DAG Endpoints](#dags) · [Task Instance Endpoints](#task-instances) · [CI/CD Trigger and Poll](#5-triggering-with-conf-and-polling-for-completion)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Variables Endpoints](#variables) · [Pools Endpoints](#pools) · [Pagination](#4-pagination)
+
+**Reference** — skim once, look up when needed:
+[Connections Endpoints](#connections) · [Health Check](#health-check)
+
+---
+
 ## The Story
 
 Your CI/CD pipeline deploys a new version of your data models at 3 PM. Immediately after, it needs to trigger the `rebuild_warehouse` DAG to apply those models. Your monitoring tool checks every hour whether the previous night's `nightly_load` succeeded. Your data quality framework needs to know which tasks ran today. None of this happens by having a human click buttons in the Airflow UI — it happens through the REST API.

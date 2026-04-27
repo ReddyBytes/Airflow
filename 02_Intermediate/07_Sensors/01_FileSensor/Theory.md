@@ -12,6 +12,22 @@ What do you do? You could delay your DAG to start later — but then on the days
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What FileSensor Does](#what-filesensor-does) · [filepath Parameter](#the-filepath-parameter) · [Glob Patterns](#handling-file-patterns-glob)
+
+**Should Learn** — important for real projects and interviews:
+[Full Working Example](#full-working-code-example) · [When to Use FileSensor](#when-to-use-filesensor)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[fs_conn_id Parameter](#the-fs_conn_id-parameter)
+
+**Reference** — skim once, look up when needed:
+[Navigation](#navigation)
+
+---
+
 ## What FileSensor Does
 
 `FileSensor` checks whether a file (or directory) exists at the specified path. It calls `os.path.exists()` (or a hook-based equivalent) on each poke.

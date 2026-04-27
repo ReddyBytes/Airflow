@@ -4,6 +4,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How KPO Works](#how-kpo-works) · [Full Parameter Reference](#full-parameter-reference) · [XCom with KubernetesPodOperator](#xcom-with-kubernetespodoperator)
+
+**Should Learn** — important for real projects and interviews:
+[Resource Management Best Practices](#resource-management-best-practices) · [Common Patterns](#common-patterns)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Using a Pod Template File](#using-a-pod-template-file)
+
+**Reference** — skim once, look up when needed:
+[Pod Lifecycle Diagram](#pod-lifecycle-diagram)
+
+---
+
 ## The Story
 
 You have a machine learning team. Their training script is in PyTorch. It needs Python 3.11, CUDA drivers, and 64GB of RAM. Your Airflow workers run Python 3.9 with 8GB of RAM.
@@ -393,5 +409,5 @@ task = KubernetesPodOperator(
 
 ## See Also
 
-- [ML Training Pipeline →](../../08_Projects/03_Advanced_Projects/05_ML_Training_Pipeline/Project_Guide.md) — Full project using KPO
+- [ML Training Pipeline →](../../09_Capstone_Projects/05_ML_Training_Pipeline/03_GUIDE.md) — Full project using KPO
 - [Dynamic Task Mapping](../../03_Advanced/16_Dynamic_Mapping/Theory.md) — Combine KPO with `expand()` for parallel pod tasks

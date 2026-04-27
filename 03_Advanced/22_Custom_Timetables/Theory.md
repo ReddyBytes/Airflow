@@ -12,6 +12,22 @@ Standard cron can't express any of that.
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What is a Timetable](#what-is-a-timetable) · [The DataInterval Concept](#the-datainterval-concept) · [Timetable ABC Methods](#timetable-abc-methods-to-implement)
+
+**Should Learn** — important for real projects and interviews:
+[Registering via Plugin](#registering-a-timetable-via-plugin) · [Built-in Timetable Classes](#built-in-timetable-classes)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Timezone-Aware Scheduling](#timezone-aware-scheduling) · [Practical Examples](#practical-examples-covered-in-code_examplemd)
+
+**Reference** — skim once, look up when needed:
+[How next_dagrun_info() Works](#mermaid-diagram-how-next_dagrun_info-works) · [Key Takeaways](#key-takeaways)
+
+---
+
 ## What is a Timetable?
 
 A Timetable is a Python class that Airflow uses to determine:

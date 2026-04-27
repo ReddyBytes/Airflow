@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How Versioning Works](#how-dag-versioning-works) · [Impact on Historical Runs](#impact-on-historical-runs) · [Version Assignment to DagRuns](#version-assignment-to-dagruns)
+
+**Should Learn** — important for real projects and interviews:
+[Best Practices for DAG Changes](#best-practices-for-dag-changes) · [Viewing Versions in UI](#viewing-versions-in-the-ui)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Versioning and Backfills](#versioning-and-backfills) · [DAG Versioning and Code Reviews](#dag-versioning-and-code-reviews)
+
+**Reference** — skim once, look up when needed:
+[Version Cleanup Config](#version-cleanup)
+
+---
+
 ## The Story
 
 You updated a DAG that was in mid-run. Old runs now show the new task structure — tasks that didn't exist when those runs started appear as "missing", and tasks you renamed show as failed. It's confusing. You can't tell what the DAG looked like when a given run executed.

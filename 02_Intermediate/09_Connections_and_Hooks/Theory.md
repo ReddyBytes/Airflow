@@ -12,6 +12,19 @@ Once you have a Connection, you need something to **use** it. That's where **Hoo
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is a Connection](#what-is-a-connection) · [What Is a Hook](#what-is-a-hook) · [How It All Fits Together](#how-it-all-fits-together)
+
+**Should Learn** — important for real projects and interviews:
+[How to Add a Connection](#how-to-add-a-connection) · [Hook vs Operator](#hook-vs-operator)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Connection Types](#connection-types)
+
+---
+
 ## What Is a Connection?
 
 A **Connection** is a named record stored in Airflow's metadata database (or a secrets backend). Each Connection has:
@@ -154,6 +167,7 @@ Most operators accept a `*_conn_id` parameter that they pass straight to the und
 - Operators are convenience wrappers built on top of Hooks.
 - Your DAG code should **never** contain raw credentials.
 
+🚀 **Apply this:** Use Hooks in a real pipeline → [Project 01 — Forex ETL Pipeline](../../09_Capstone_Projects/01_Forex_ETL_Pipeline/01_MISSION.md)
 ---
 
 ## Navigation

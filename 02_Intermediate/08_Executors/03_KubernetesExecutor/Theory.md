@@ -1,7 +1,24 @@
 # KubernetesExecutor in Apache Airflow 3
 
+🚀 **Apply this:** Run Airflow with KubernetesExecutor → [Project 10 — Airflow on Kubernetes](../../09_Capstone_Projects/10_Airflow_on_Kubernetes/01_MISSION.md)
 ## 📂 Navigation
 ⬅️ **Prev: [CeleryExecutor](../02_CeleryExecutor/Theory.md)** | 🏠 **[Home](../../../00_Learning_Guide/Learning_Path.md)** | ➡️ **Next: [EdgeExecutor](../04_EdgeExecutor/Theory.md)**
+
+---
+
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is KubernetesExecutor](#what-is-kubernetesexecutor) · [Architecture](#architecture) · [How It Works Step by Step](#how-it-works-step-by-step)
+
+**Should Learn** — important for real projects and interviews:
+[Pod Template File](#pod-template-file) · [Per-Task Pod Override](#per-task-pod-override) · [Configuration](#configuration)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Namespace and Service Account Setup](#namespace-and-service-account-setup) · [Logs](#logs) · [Pros and Cons](#pros-and-cons)
+
+**Reference** — skim once, look up when needed:
+[KubernetesExecutor vs CeleryExecutor vs CeleryKubernetesExecutor](#kubernetesexecutor-vs-celeryexecutor-vs-celerykunbernetesexecutor)
 
 ---
 

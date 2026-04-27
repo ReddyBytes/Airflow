@@ -12,6 +12,19 @@ Workers are expensive. The Triggerer is cheap. Deferrable operators move the "ju
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How Deferral Works](#how-deferral-works-step-by-step) · [The Triggerer Component](#the-triggerer-component) · [self.defer()](#selfdefer-the-handoff)
+
+**Should Learn** — important for real projects and interviews:
+[Deferrable Versions of Standard Operators](#deferrable-versions-of-standard-operators) · [BaseTrigger Interface](#basetrigger-the-interface)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Key Takeaways](#key-takeaways)
+
+---
+
 ## How Deferral Works: Step by Step
 
 1. **Task starts on a worker.** The operator's `execute()` method runs normally.

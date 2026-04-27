@@ -1,7 +1,24 @@
 # Core Operators — BashOperator, PythonOperator, EmptyOperator
 
+🚀 **Apply this:** Use operators in a real pipeline → [Project 02 — Simple File Processing](../../09_Capstone_Projects/02_Simple_File_Processing/01_MISSION.md)
 ## 📂 Navigation
 ⬅️ **Prev:** [Your First DAG](../04_Your_First_DAG/Theory.md) | 🏠 **[Home](../../00_Learning_Guide/Learning_Path.md)** | ➡️ **Next:** [DAG Scheduling](../../02_Intermediate/06_DAG_Scheduling/Theory.md)
+
+---
+
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[BashOperator](#operator-1-bashoperator) · [PythonOperator](#operator-2-pythonoperator) · [EmptyOperator](#operator-3-emptyoperator)
+
+**Should Learn** — important for real projects and interviews:
+[The context Dictionary](#the-context-dictionary) · [When to Use Each Operator](#summary-when-to-use-each-operator)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Complete Pipeline Example](#a-complete-pipeline-using-all-three) · [The 8020 Rule](#the-8020-rule-of-operators)
+
+**Reference** — skim once, look up when needed:
+[BashOperator Key Parameters](#key-parameters) · [PythonOperator Key Parameters](#key-parameters-1)
 
 ---
 

@@ -2,6 +2,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What is a DAG](#what-is-a-dag) · [DAG File Structure](#dag-file-structure) · [Task Dependencies](#task-dependencies) · [Key DAG Parameters](#key-dag-parameters)
+
+**Should Learn** — important for real projects and interviews:
+[DAG Run vs Task Instance](#dag-run-vs-task-instance) · [Catchup](#catchup--a-common-source-of-confusion) · [Common Mistakes](#common-mistakes-️)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[schedule_interval Cron](#schedule_interval--cron-expressions) · [Real-World Usage](#real-world-usage)
+
+**Reference** — skim once, look up when needed:
+[A Complete Simple DAG](#a-complete-simple-dag) · [Connection to Other Concepts](#connection-to-other-concepts-)
+
+---
+
 ## The Story 📖
 
 Imagine you are a pastry chef, and someone hands you a recipe card for a layered chocolate cake.
@@ -383,6 +399,7 @@ You know the DAG container. Now learn what goes inside it — the Operators that
 
 ---
 
+🚀 **Apply this:** Write a real DAG from scratch → [Project 01 — Forex ETL Pipeline](../../09_Capstone_Projects/01_Forex_ETL_Pipeline/01_MISSION.md)
 ## 📂 Navigation
 
 ⬅️ **Prev:** [02 · Installation & Setup — Theory](../02_Installation_and_Setup/Theory.md) | 🏠 **[Home](../00_Learning_Guide/Learning_Path.md)** | ➡️ **Next:** [04 · Operators](../04_Operators/Theory.md)

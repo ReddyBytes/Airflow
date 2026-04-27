@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is LocalExecutor](#what-is-localexecutor) · [Configuration](#configuration) · [How LocalExecutor Works Internally](#how-localexecutor-works-internally)
+
+**Should Learn** — important for real projects and interviews:
+[LocalExecutor vs SequentialExecutor](#localexecutor-vs-sequentialexecutor) · [LocalExecutor vs CeleryExecutor](#localexecutor-vs-celeryexecutor) · [When to Use LocalExecutor](#when-to-use-localexecutor)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[LocalExecutor vs KubernetesExecutor](#localexecutor-vs-kubernetesexecutor) · [Practical Configuration Example](#practical-configuration-example)
+
+**Reference** — skim once, look up when needed:
+[Key Takeaways](#key-takeaways)
+
+---
+
 ## The Story: Your First Step Into Real Parallelism
 
 You have been running Airflow with the default `SequentialExecutor` in development. It works fine for testing — tasks run one at a time. But you notice your pipeline takes 45 minutes even though most of that time is tasks waiting on each other unnecessarily. Five tasks that could run at the same time are queued up and running sequentially because the executor only supports one task at a time.

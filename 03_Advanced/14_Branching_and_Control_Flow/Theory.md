@@ -14,6 +14,19 @@ Instead of writing complex conditional logic inside a single task, you model the
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[BranchPythonOperator](#branchpythonoperator) · [TriggerRule](#triggerrule) · [ShortCircuitOperator](#shortcircuitoperator)
+
+**Should Learn** — important for real projects and interviews:
+[Practical Patterns](#practical-patterns)
+
+**Reference** — skim once, look up when needed:
+[TriggerRule Reference Table](#triggerrule-reference-table)
+
+---
+
 ## BranchPythonOperator
 
 `BranchPythonOperator` calls a Python function that returns the **task_id** of the branch to follow. All other downstream tasks are **skipped** (marked with `SKIPPED` status — not failed).
@@ -170,6 +183,7 @@ A notification task with `trigger_rule="one_failed"` placed downstream of multip
 - After a branch, use `trigger_rule="none_failed"` on join tasks so they aren't skipped.
 - Model decisions as tasks — it makes the DAG graph self-documenting.
 
+🚀 **Apply this:** Use BranchPythonOperator in an MLOps loop → [Project 08 — ML Model Retraining Pipeline](../../09_Capstone_Projects/08_ML_Retraining_Pipeline/01_MISSION.md)
 ---
 
 ## Navigation

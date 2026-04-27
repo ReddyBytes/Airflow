@@ -4,6 +4,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Two Approaches](#two-approaches) · [Approach 1 BashOperator](#approach-1-bashoperator-simple) · [Approach 2 astronomer-cosmos](#approach-2-astronomer-cosmos-production)
+
+**Should Learn** — important for real projects and interviews:
+[The DbtTaskGroup Embedded in a Larger DAG](#the-dbttaskgroup-embedded-in-a-larger-dag) · [Handling dbt Test Failures](#handling-dbt-test-failures)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Passing Variables to dbt](#passing-variables-to-dbt)
+
+**Reference** — skim once, look up when needed:
+[Best Practices](#best-practices)
+
+---
+
 ## The Story
 
 You have a dbt project with 50 models. They need to run every morning after raw data lands in your warehouse. Some models depend on others. Some have tests that catch bad data. When tests fail, you want a Slack alert, not a silent bad dashboard.

@@ -14,6 +14,22 @@ One important note before we dive in: if you've seen Airflow tutorials from befo
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What is a TaskGroup](#what-is-a-taskgroup) · [TaskGroup Syntax](#taskgroup-syntax) · [Why SubDAGs Were Removed](#why-subdags-were-removed)
+
+**Should Learn** — important for real projects and interviews:
+[Nested Task Groups](#nested-task-groups) · [ETL Stage Pattern](#practical-pattern-group-by-etl-stage)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[prefix_group_id Parameter](#prefix_group_id-parameter) · [Labels in the UI](#labels-in-the-ui)
+
+**Reference** — skim once, look up when needed:
+[Key Takeaways](#key-takeaways)
+
+---
+
 ## What is a TaskGroup?
 
 A `TaskGroup` is a visual and logical container for a set of tasks within a single DAG. Tasks inside a group are displayed together in the UI and can be collapsed into a single node.
@@ -188,6 +204,7 @@ This pattern gives you:
 - SubDAGs are **completely removed** in Airflow 3 — TaskGroup is the replacement.
 - TaskGroup has zero runtime overhead — it is a UI and organizational concept only.
 
+🚀 **Apply this:** Organise a multi-source ETL with TaskGroups → [Project 09 — Data Warehouse ETL](../../09_Capstone_Projects/09_Data_Warehouse_ETL/01_MISSION.md)
 ---
 
 ## Navigation

@@ -2,7 +2,7 @@
 
 This folder contains the original forex data pipeline — a real Airflow DAG that demonstrates a complete ETL workflow using HTTP sensors, file sensors, Python operators, and Bash operators.
 
-> The fully documented version with step-by-step guide is in [`08_Projects/01_Beginner_Projects/01_Forex_ETL_Pipeline/`](../08_Projects/01_Beginner_Projects/01_Forex_ETL_Pipeline/).
+> The fully documented version with step-by-step guide is in [`09_Capstone_Projects/01_Beginner_Projects/01_Forex_ETL_Pipeline/`](../09_Capstone_Projects/01_Beginner_Projects/01_Forex_ETL_Pipeline/).
 
 ---
 
@@ -53,4 +53,4 @@ Check API → Check File → Download Rates → Save to HDFS → Create Hive Tab
 
 ## 📂 Navigation
 
-🏠 **[Home](../README.md)** &nbsp;|&nbsp; 📁 **[Full Project Guide](../08_Projects/01_Beginner_Projects/01_Forex_ETL_Pipeline/Project_Guide.md)**
+🏠 **[Home](../README.md)** &nbsp;|&nbsp; 📁 **[Full Project Guide](../09_Capstone_Projects/01_Forex_ETL_Pipeline/03_GUIDE.md)**

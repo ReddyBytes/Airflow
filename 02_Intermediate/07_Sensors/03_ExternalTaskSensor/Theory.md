@@ -12,6 +12,22 @@ Think of it like an email notification between colleagues. DAG B posts a lookout
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How ExternalTaskSensor Works](#how-externaltasksensor-works) · [external_dag_id and external_task_id](#external_task_id) · [execution_delta](#execution_delta)
+
+**Should Learn** — important for real projects and interviews:
+[Execution Date Matching Problem](#the-execution-date-matching-problem) · [Full Working Example](#full-working-code-example)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[allowed_states and failed_states](#allowed_states) · [Common Pitfalls](#common-pitfalls)
+
+**Reference** — skim once, look up when needed:
+[Navigation](#navigation)
+
+---
+
 ## How ExternalTaskSensor Works
 
 The sensor queries the Airflow metadata database (not the DAG file) to check the state of a task in another DAG. It looks for a TaskInstance with:

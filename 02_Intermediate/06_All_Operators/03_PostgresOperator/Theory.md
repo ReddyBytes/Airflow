@@ -10,6 +10,22 @@ Think of it like having a database administrator (DBA) on your pipeline team. Yo
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Setting Up the Connection](#prerequisites-setting-up-the-postgres-connection) · [postgres_conn_id Parameter](#the-postgres_conn_id-parameter) · [sql Parameter](#the-sql-parameter)
+
+**Should Learn** — important for real projects and interviews:
+[Jinja Templating in SQL](#jinja-templating-in-sql) · [When to Use PostgresOperator](#when-to-use-postgresoperator) · [Full Working Code Example](#full-working-code-example)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[autocommit](#autocommit) · [Safe Bind Variables](#using-parameters-for-safe-bind-variables)
+
+**Reference** — skim once, look up when needed:
+[Connection via Environment Variable](#step-3-or-add-the-connection-via-environment-variable)
+
+---
+
 ## Prerequisites: Setting Up the Postgres Connection
 
 Before you can use `PostgresOperator`, you need to tell Airflow how to reach your database. This is done through Airflow's **Connections** system.

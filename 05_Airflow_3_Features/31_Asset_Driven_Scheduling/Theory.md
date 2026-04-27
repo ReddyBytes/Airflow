@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Are Assets](#what-are-assets) · [Asset-Producing DAGs](#asset-producing-dags-outlets) · [Asset-Consuming DAGs](#asset-consuming-dags-schedule)
+
+**Should Learn** — important for real projects and interviews:
+[Producer to Consumer Flow](#the-full-picture-producer--asset--consumer) · [Multiple Asset Dependencies](#multiple-asset-dependencies-and-logic) · [Best Practices](#best-practices)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[asset Decorator](#the-asset-decorator-new-in-airflow-3) · [Asset Aliases](#asset-aliases-new-in-airflow-3) · [AssetAny and AssetAll](#conditional-asset-scheduling-or-logic)
+
+**Reference** — skim once, look up when needed:
+[Airflow 2 Datasets vs Assets](#airflow-2-datasets-vs-airflow-3-assets) · [Asset Lineage in UI](#asset-lineage-in-the-ui)
+
+---
+
 ## The Story
 
 Traditional Airflow: DAG A runs at 6am, DAG B runs at 7am hoping DAG A is done. What if DAG A finishes at 6:47am? DAG B either waits pointlessly or fails. What if there's an upstream delay and DAG A doesn't finish until 7:12am? DAG B has already started and is reading stale data.
@@ -377,6 +393,7 @@ with DAG(schedule=[SALES_ASSET]) as dag:
     ...
 ```
 
+��� **Apply this:** Build a pure Asset-driven pipeline → [Project 06 — Event-Driven Asset Pipeline](../../09_Capstone_Projects/06_Event_Driven_Asset_Pipeline/01_MISSION.md)
 ---
 
 ## Navigation

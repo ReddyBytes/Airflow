@@ -15,6 +15,22 @@ That is what `DockerOperator` does. It takes a Docker image, runs a command insi
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is DockerOperator](#what-is-dockeroperator) · [Key Parameters](#key-parameters) · [Volume Mounts](#volume-mounts)
+
+**Should Learn** — important for real projects and interviews:
+[auto_remove Behavior](#how-auto_remove-works) · [Use Cases](#use-cases) · [Limitations](#limitations-and-considerations)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Resource Limits](#resource-limits) · [DockerOperator Lifecycle](#mermaid-dockeroperator-lifecycle)
+
+**Reference** — skim once, look up when needed:
+[Setup](#setup)
+
+---
+
 ## What Is DockerOperator?
 
 `DockerOperator` (from `apache-airflow-providers-docker`) runs a command inside a Docker container. The container is started fresh for each task execution and cleaned up afterward. Key capabilities:

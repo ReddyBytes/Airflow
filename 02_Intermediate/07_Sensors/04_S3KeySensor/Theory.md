@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is S3KeySensor](#what-is-s3keysensor) · [Key Parameters](#key-parameters) · [Sensor Modes](#sensor-modes-explained)
+
+**Should Learn** — important for real projects and interviews:
+[bucket_key Format Options](#bucket_key-format-options) · [Common Patterns](#common-patterns) · [Wildcard Matching](#wildcard-matching)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[S3KeySensor Decision Flow](#mermaid-s3keysensor-decision-flow)
+
+**Reference** — skim once, look up when needed:
+[Setup](#setup)
+
+---
+
 ## The Story: Waiting for a File That Hasn't Arrived Yet
 
 Your pipeline processes supplier data files uploaded to an S3 bucket every morning. The problem: the supplier uploads sometime between 6 AM and 10 AM, and you never know exactly when. If you schedule your DAG at 6 AM, it will fail most days because the file isn't there yet. If you schedule at 10 AM, you are wasting 4 hours when the file often arrives at 6:30 AM.

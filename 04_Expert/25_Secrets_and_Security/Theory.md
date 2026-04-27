@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Secrets Backend Lookup Chain](#1-how-secrets-backends-work) · [Fernet Key Encryption](#6-fernet-key-at-rest-encryption) · [Environment Variable Secrets](#5-environment-variable-secrets)
+
+**Should Learn** — important for real projects and interviews:
+[Vault Backend Config](#2-hashicorp-vault-backend) · [AWS Secrets Manager](#3-aws-secrets-manager-backend) · [RBAC Built-in Roles](#7-rbac-in-airflow-3)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[GCP Secret Manager](#4-gcp-secret-manager-backend) · [Auth Manager and JWT](#8-auth-manager-in-airflow-3)
+
+**Reference** — skim once, look up when needed:
+[Vault Auth Types](#vault-auth-types) · [Fernet Key Rotation](#key-rotation)
+
+---
+
 ## The Story
 
 Your DAG files are in a public GitHub repo. You cannot hardcode database passwords. Storing them in Airflow's metadata database is possible — it supports Fernet encryption — but your security team controls a HashiCorp Vault cluster. They want every secret in Vault. Rotate a password in Vault, and the next DAG run picks it up automatically, no Airflow changes needed. Airflow's secrets backend system makes this possible.

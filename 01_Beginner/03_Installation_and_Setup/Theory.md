@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Docker Compose Install](#method-1--docker-compose-recommended) · [Step-by-Step Setup](#step-by-step-docker-compose-installation) · [Folder Structure](#folder-structure-after-setup)
+
+**Should Learn** — important for real projects and interviews:
+[Prerequisites](#prerequisites) · [pip Install](#method-2--pip-install-bare-metal) · [Common First-Run Issues](#common-first-run-issues)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[First Login and UI Tour](#first-login-and-ui-tour) · [Airflow 3 Services](#airflow-3-services-in-docker-compose)
+
+**Reference** — skim once, look up when needed:
+[Stopping and Cleaning Up](#stopping-and-cleaning-up)
+
+---
+
 ## The Restaurant Opening Analogy
 
 Setting up Airflow 3 is like opening a new restaurant. You need the right kitchen equipment before the first order comes in.

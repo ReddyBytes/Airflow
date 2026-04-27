@@ -12,6 +12,22 @@ This is Airflow 3's answer to "I need a variable number of parallel tasks."
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[expand()](#expand----expand-a-single-parameter) · [partial()](#partial----fix-some-params-expand-others) · [XCom with Mapped Tasks](#xcom-with-mapped-tasks)
+
+**Should Learn** — important for real projects and interviews:
+[expand_kwargs()](#expand_kwargs----dict-based-expansion) · [Chaining Mapped Tasks](#chaining-mapped-tasks) · [Limitations and Best Practices](#limitations-and-best-practices)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Cross-Product Mapping](#cross-product-mapping-expand-multiple-params) · [map_index](#map_index----accessing-the-task-instances-index)
+
+**Reference** — skim once, look up when needed:
+[filter() for Conditional Mapping](#filter-for-conditional-mapping) · [Mermaid Diagram](#mermaid-diagram-dynamic-mapping-flow)
+
+---
+
 ## expand() — Expand a Single Parameter
 
 `expand()` is the core mechanism. You call it on an operator's parameter to tell Airflow: "don't pass this as a single value — pass each item in this list as a separate task instance."
@@ -255,6 +271,7 @@ graph TD
 - `map_index` is accessible via `context["task_instance"].map_index`.
 - Cross-product mapping creates the full Cartesian product of all expanded parameters.
 
+🚀 **Apply this:** Pull from 3 sources with expand() → [Project 04 — Multi-Source ETL](../../09_Capstone_Projects/04_Multi_Source_ETL/01_MISSION.md)
 ---
 
 ## Navigation

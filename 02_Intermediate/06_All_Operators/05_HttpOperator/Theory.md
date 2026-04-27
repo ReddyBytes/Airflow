@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[What Is HttpOperator](#what-is-httpoperator) · [Setup and Connection](#setup-installing-the-provider-and-creating-a-connection) · [Key Parameters](#key-parameters)
+
+**Should Learn** — important for real projects and interviews:
+[response_check](#response_check--validate-the-response) · [response_filter](#response_filter--extract-a-value-for-xcom) · [Common Patterns](#common-patterns)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Accessing Response Downstream](#accessing-the-response-in-downstream-tasks) · [data Parameter](#data--request-body)
+
+**Reference** — skim once, look up when needed:
+[Key Takeaways](#key-takeaways) · [extra_options](#extra_options--pass-to-requests)
+
+---
+
 ## The Story: Calling External Services from Your Pipeline
 
 Your pipeline needs to talk to the outside world. Maybe it needs to:

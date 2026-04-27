@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[The AirflowPlugin Class](#1-the-airflowplugin-class) · [Plugin Discovery](#3-plugin-discovery) · [Listeners](#7-listeners)
+
+**Should Learn** — important for real projects and interviews:
+[What Can Be Plugged In](#2-what-can-be-plugged-in) · [Custom Macros Plugin](#5-custom-macros-plugin) · [Listeners vs Callbacks](#listeners-vs-callbacks)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Custom UI Page with AppBuilderBaseView](#6-custom-ui-page-with-appbuilderbaseview) · [Lazy Loading](#4-lazy-loading)
+
+**Reference** — skim once, look up when needed:
+[Plugin System Architecture](#8-plugin-system-architecture) · [Key Takeaways](#key-takeaways)
+
+---
+
 ## The Story
 
 Out of the box Airflow is powerful. But enterprise teams need more — custom UI pages, company-specific macros, proprietary data sources. Airflow's Plugin system lets you extend everything without forking the codebase. A payments team might add a custom "Reconciliation Dashboard" page to the Airflow UI. A data platform team might add custom macros so DAG authors can use `{{ ds_tz("America/New_York") }}`. A compliance team might add a listener that sends every task failure to an audit system. None of this requires modifying Airflow source code.

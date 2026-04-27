@@ -12,6 +12,22 @@ Monitoring is your production safety net. Not just "did it fail?" but "is it hea
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How Airflow Emits Metrics](#how-airflow-emits-metrics) · [Key Metrics Airflow Emits](#key-metrics-airflow-emits) · [Built-in Health Check Endpoint](#built-in-health-check-endpoint)
+
+**Should Learn** — important for real projects and interviews:
+[The Monitoring Stack](#the-monitoring-stack) · [DAG-Level Monitoring Callbacks](#dag-level-monitoring-callbacks-as-alerts) · [Key Grafana Panels](#key-grafana-panels-to-build)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[New Relic / Datadog Integration](#new-relic--datadog-integration) · [Prometheus Scrape Configuration](#prometheus-scrape-configuration)
+
+**Reference** — skim once, look up when needed:
+[Key Takeaways](#key-takeaways)
+
+---
+
 ## How Airflow Emits Metrics
 
 Airflow uses the **StatsD protocol** to emit metrics. Every time something happens — a task finishes, a DAG is parsed, a scheduler heartbeat fires — Airflow sends a metric to a StatsD endpoint.

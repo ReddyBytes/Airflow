@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How Jinja Rendering Works](#how-jinja-rendering-works) · [What Are template_fields](#what-are-template_fields) · [Built-In Airflow Macros Complete Reference](#built-in-airflow-macros--complete-reference)
+
+**Should Learn** — important for real projects and interviews:
+[Practical Patterns](#practical-patterns) · [Common Mistakes](#common-mistakes)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Custom Macros via Plugins](#custom-macros-via-plugins) · [Adding template_fields to Your Own Operators](#adding-template_fields-to-your-own-operators)
+
+**Reference** — skim once, look up when needed:
+[Other macros Helpers](#other-macros-helpers)
+
+---
+
 ## The Story: Your DAG Knows What Time It Is
 
 Every time your DAG runs, it carries something precious: context. It knows exactly *when* it is scheduled to run, what the data interval is, what the run ID is, and much more.

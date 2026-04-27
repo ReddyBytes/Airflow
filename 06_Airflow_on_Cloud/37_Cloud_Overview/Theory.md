@@ -4,6 +4,19 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[The Three Paths](#the-three-paths) · [Self-Managed vs Managed](#self-managed-vs-managed-the-core-trade-off) · [When to Choose Each](#when-to-choose-each)
+
+**Should Learn** — important for real projects and interviews:
+[Cost Comparison](#cost-comparison) · [Operational Complexity](#operational-complexity)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Migration Path](#migration-path)
+
+---
+
 ## The Production Problem
 
 Running Airflow locally is one command: `airflow standalone`. Running it in production means answering a harder question:

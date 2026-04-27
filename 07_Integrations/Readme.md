@@ -1,5 +1,5 @@
 <div align="center">
-⬅️ [Airflow on Cloud](../06_Airflow_on_Cloud/Readme.md) &nbsp;|&nbsp; 🏠 [Home](../00_Learning_Guide/Readme.md) &nbsp;|&nbsp; [Projects ➡️](../08_Projects/Readme.md)
+⬅️ [Airflow on Cloud](../06_Airflow_on_Cloud/Readme.md) &nbsp;|&nbsp; 🏠 [Home](../00_Learning_Guide/Readme.md) &nbsp;|&nbsp; [Projects ➡️](../09_Capstone_Projects/README.md)
 </div>
 
 ---
@@ -102,5 +102,5 @@ flowchart LR
 ---
 
 <div align="center">
-⬅️ [Airflow on Cloud](../06_Airflow_on_Cloud/Readme.md) &nbsp;|&nbsp; 🏠 [Home](../00_Learning_Guide/Readme.md) &nbsp;|&nbsp; [Projects ➡️](../08_Projects/Readme.md)
+⬅️ [Airflow on Cloud](../06_Airflow_on_Cloud/Readme.md) &nbsp;|&nbsp; 🏠 [Home](../00_Learning_Guide/Readme.md) &nbsp;|&nbsp; [Projects ➡️](../09_Capstone_Projects/README.md)
 </div>

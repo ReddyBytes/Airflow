@@ -4,6 +4,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Architecture](#architecture) · [Deploying DAGs](#deploying-dags) · [Workload Identity No JSON Keys Needed](#workload-identity-no-json-keys-needed)
+
+**Should Learn** — important for real projects and interviews:
+[Pre-Installed Google Operators](#pre-installed-google-operators) · [Composer vs MWAA](#composer-vs-mwaa)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Creating a Composer 2 Environment](#creating-a-composer-2-environment) · [Cost Model](#cost-model)
+
+**Reference** — skim once, look up when needed:
+[Composer 2 vs Composer 1](#composer-2-vs-composer-1) · [Installing Python Packages](#installing-python-packages)
+
+---
+
 ## The Story
 
 Your data stack is on Google Cloud. Analysts query BigQuery all day. Raw data lands in GCS from Pub/Sub. Transformations run on Dataflow. You need Airflow to orchestrate all of it.

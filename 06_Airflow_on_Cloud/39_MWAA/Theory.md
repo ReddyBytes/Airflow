@@ -4,6 +4,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Architecture](#architecture) · [How DAG Deployment Works](#how-dag-deployment-works) · [Connecting to AWS Services](#connecting-to-aws-services)
+
+**Should Learn** — important for real projects and interviews:
+[Installing Python Packages](#installing-python-packages) · [Accessing Connections Securely](#accessing-connections-securely) · [MWAA vs Self-Managed](#mwaa-vs-self-managed-the-honest-trade-off)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[VPC Requirements](#vpc-requirements) · [Environment Tiers](#environment-tiers)
+
+**Reference** — skim once, look up when needed:
+[Limitations Summary](#limitations-summary) · [Airflow Version Support](#airflow-version-support)
+
+---
+
 ## The Story
 
 Your data team needs Airflow in production by end of the week. No one knows Kubernetes. Your DevOps engineer is on holiday. You have three days and a deadline.

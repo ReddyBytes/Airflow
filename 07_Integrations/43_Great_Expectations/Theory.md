@@ -4,6 +4,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[How It Works](#how-it-works) · [Key Concepts](#key-concepts) · [Using GreatExpectationsOperator in a DAG](#using-greatexpectationsoperator-in-a-dag)
+
+**Should Learn** — important for real projects and interviews:
+[Creating an Expectation Suite](#creating-an-expectation-suite) · [Integrating GE into an ETL DAG](#integrating-ge-into-an-etl-dag)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Setup](#setup)
+
+**Reference** — skim once, look up when needed:
+[Common Expectations Reference](#common-expectations-reference)
+
+---
+
 ## The Story
 
 Your ETL pipeline loads 2 million rows from an API into your data warehouse every day. Most days it works perfectly. But sometimes:

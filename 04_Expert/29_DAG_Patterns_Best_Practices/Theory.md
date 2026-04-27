@@ -5,6 +5,22 @@
 
 ---
 
+## 📌 Learning Priority
+
+**Must Learn** — core concepts, needed to understand the rest of this file:
+[Idempotency](#1-idempotency) · [Avoid Top-Level Code](#4-avoid-top-level-code) · [Backfill Safety](#3-backfill-safety)
+
+**Should Learn** — important for real projects and interviews:
+[Atomic Writes](#2-atomic-writes) · [DAG Factory Pattern](#5-dag-factory-pattern) · [Fan-Out Fan-In](#6-fan-out--fan-in-pattern)
+
+**Good to Know** — useful in specific situations, not needed daily:
+[Config-Driven DAGs](#7-config-driven-dags-yamljson) · [DAG Documentation](#9-documentation-in-dags)
+
+**Reference** — skim once, look up when needed:
+[DAG Versioning Strategies](#8-dag-versioning)
+
+---
+
 ## The Story
 
 After years of running Airflow in production, certain patterns emerge as reliable and others as maintenance nightmares. The team that treats Airflow DAGs as casual scripts ends up with pipelines that break mysteriously on reruns, fail non-reproducibly, and resist debugging. The team that applies these patterns ends up with pipelines that can be retried confidently, backfilled safely, and understood by anyone who reads the code.
